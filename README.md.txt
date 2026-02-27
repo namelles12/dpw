@@ -1,0 +1,1 @@
+Nama: David Qhoiri Satriyo Wibowo
