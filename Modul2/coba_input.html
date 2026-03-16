@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Input</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+
+    <hr>
+
+    <label for="username"> type "text" :</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">type "password" :</label><br>
+    <input type="password" id="pwd" name="pwd"><br>
+
+    <hr>
+
+    <h3>Uji coba 2</h3>
+    <input type="radio" id="html" name="bahasa" value="HTML"> 
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="bahasa" value="CSS"> 
+    <label for="css">CSS</label><br>
+    <input type="radio" id="Javascript" name="bahasa" value="JavaScript"> 
+    <label for="Javascript">JavaScript</label>
+
+    <p><b>Kesimpulan Uji Coba 2:</b></p>
+    <p>Atribut name yang sama pada radio button berfungsi untuk membuat grup pilihan tunggal.</p>
+
+    <hr>
+
+    <h3>Uji coba 3</h3>
+    <input type="checkbox" id="id1" name="kendaraan1" value="Bike">
+    <label for="id1">Saya memiliki sepeda</label><br>
+    <input type="checkbox" id="id2" name="kendaraan2" value="Car">
+    <label for="id2">Saya memiliki mobil</label><br>
+    <input type="checkbox" id="id3" name="kendaraan3" value="Boat">
+    <label for="id3">Saya memiliki kapal</label>
+
+    <p><b>Kesimpulan Uji Coba 3:</b></p>
+    <p>Checkbox memungkinkan pemilihan ganda meskipun atribut name-nya berbeda atau sama.</p>
+
+    <hr>
+
+    <h3>Uji coba 4</h3>
+    <label for="favcolor">Pilih warna dengan type="color":</label>
+    <input type="color" id="favcolor" name="favcolor"><br>
+    <label for="b">Pilih tanggal dengan type="date":</label>
+    <input type="date" id="b" name="tanggal"><br>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!"> <br>
+
+    <p><b>Kesimpulan Uji Coba 4:</b></p>
+    <p>Input color dan date memberikan UI khusus untuk mempermudah pemilihan data visual dan waktu.</p>
+
+    <hr>
+
+    <h3>Uji coba 5</h3>
+    <label for="birthdaytime">input dengan datetime-local:</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    <label for="bdaymonth">input dengan type month:</label>
+    <input type="month" id="bdaymonth" name="bdaymonth"><br>
+    <label for="email">input dengan email anda:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <p><b>Kesimpulan Uji Coba 5:</b></p>
+    <p>
+        Berdasarkan pengujian pada beberapa browser (seperti Chrome, Firefox, dan Edge), input tipe <b>datetime-local</b> dan <b>month</b> sangat bergantung pada dukungan mesin browser. Browser modern seperti Chrome menyediakan <i>pop-up</i> kalender dan jam yang sangat lengkap, namun pada browser lama mungkin hanya muncul sebagai kotak teks biasa. Selain itu, tipe <b>email</b> memberikan validasi otomatis yang akan menolak pengiriman data jika format penulisan tidak menyertakan karakter '@' dan domain yang benar.
+    </p>
+
+    <hr>
+
+    <h3>Uji coba 6</h3>
+    <input type="image" drc="gambar/icon.png" alt="Submit" widht="48" height="48"><br>
+    <label for="mylife">pilih file:</label>
+    <input type="file" id="mylife" name="mylife"><br>
+    <input type="hidden" id="custId" name="custId" value="3487"><br>
+    <p><b>Kesimpulan Uji Coba 6:</b></p>
+    <p>
+        Berdasarkan hasil pengujian, tipe input yang ada memiliki kegunaan sebagai berikut: 
+        1) Tipe <b>image</b> berfungsi sebagai tombol <i>submit</i> grafis yang menggunakan gambar alih-alih teks standar. 
+        2) Tipe <b>file</b> memungkinkan pengguna untuk memilih dan mengunggah dokumen atau media dari penyimpanan perangkat mereka ke server. 
+        3) Tipe <b>hidden</b> digunakan untuk menyimpan data teknis (seperti ID pengguna atau token keamanan) yang perlu dikirimkan saat form di-submit, namun data tersebut tetap tidak terlihat oleh pengguna di halaman web.
+    </p>
+
+    <hr>
+
+    <h3>Uji coba 7</h3>
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10"><br>
+    <label for="vol">Volume (between 0 dan 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50"><br>
+    <p><b>Kesimpulan Uji Coba 7:</b></p>
+    <p>
+        Setelah di coba dari yang awalnya 50 masih bisa di geser dari 0 ke 50, ketika di ubah ke -50 maka tidak bisa di geser.
+    </p>
+
+    <hr>
+
+    <h3>Uji coba 8</h3>
+    <label for="homepage">Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage"><br>
+    <label for="gsearch">Search Google:</label>
+    <input type="search" id="gsearch" name="gsearch"><br>
+    <label for="ph">Enter your phone number:</label>
+    <input type="tel" id="ph" name="phone" pattern="[0-9] {3}- [0-9] {2}-[0-9] {3}"><br>
+    <p><b>Kesimpulan Uji Coba 8:</b></p>
+    <p>
+        Tipe input <b>url</b> memvalidasi bahwa nilai yang dimasukkan adalah URL yang benar. Tipe <b>search</b> memberikan UI khusus untuk pencarian, sementara tipe <b>tel</b> digunakan untuk memasukkan nomor telepon dengan pola tertentu.
+    </p>
+
+    <hr>
+
+    <h3>Uji coba 9</h3>
+    <label for="appt">Select a time:</label>
+    <input type="time" id="appt" name="appt"><br>
+    <label for="week">Select a week:</label>
+    <input type="week" id="week" name="week"><br>
+    <p><b>Kesimpulan Uji Coba 9:</b></p>
+    <p>
+        Tipe input <b>time</b> memungkinkan pengguna untuk memilih waktu, sementara tipe <b>week</b> memungkinkan pengguna untuk memilih minggu.
+    </p>
+
+    <hr>
+</body>
+</html>
