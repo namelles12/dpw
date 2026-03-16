@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="/action_page.php" method="post" target="_self">
+        <label for="depan">Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        <label for="n_belakang">Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>
+        Jika anda mengklik tombol "Kirim", data formulir akan di kirim ke halaman bernama "/action_page.php"
+    </p>
+
+    <hr>
+    <h3>Kesimpulan Uji Coba</h3>
+    <p>
+        Berdasarkan serangkaian uji coba yang dilakukan, dapat disimpulkan bahwa tombol <b>reset</b> berfungsi untuk mengembalikan semua isian formulir ke nilai awal (default). Atribut <b>target</b> sangat menentukan di mana hasil pemrosesan akan ditampilkan; nilai <i>_self</i> akan membuka di tab yang sama, sedangkan <i>_blank</i> akan membuka tab baru. Terkait metode pengiriman, penggunaan <b>method="get"</b> akan menampilkan data input secara transparan pada URL browser, sehingga lebih cocok untuk pencarian dan memiliki batasan karakter. Sebaliknya, <b>method="post"</b> mengirimkan data secara tersembunyi di dalam HTTP request body, yang membuatnya jauh lebih aman untuk menangani data sensitif atau data dalam jumlah besar karena tidak terlihat pada alamat URL.
+    </p>
+</body>
+</html>
