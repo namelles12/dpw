@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Gambar - Galeri Pemandangan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        /* Layouting Dasar sesuai Modul 3 [cite: 213-263] */
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        
+        nav { 
+            float: left; 
+            width: 30%; 
+            min-height: 600px; 
+            background: #ccc; 
+            padding: 20px; 
+        }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        article { 
+            float: left; 
+            padding: 20px; 
+            width: 70%; 
+            background-color: #f1f1f1; 
+            min-height: 600px; 
+        }
+        
+        section::after { 
+            content: ""; 
+            display: table; 
+            clear: both; 
+        }
+        
+        footer { 
+            background-color: #777; 
+            padding: 10px; 
+            text-align: center; 
+            color: white; 
+        }
+
+        /* PERBAIKAN: Galeri agar pas 3 gambar per baris sesuai screenshot */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; /* Supaya gambar ke-4 otomatis turun ke bawah */
+            gap: 10px;       /* Jarak antar gambar */
+            margin-top: 20px;
+        }
+        
+        .gallery img {
+            /* Menghitung lebar: (100% / 3 gambar) dikurangi jarak gap */
+            width: calc(33.33% - 7px); 
+            height: 180px;   /* Tinggi seragam agar rapi seperti di gambar */
+            object-fit: cover; /* Gambar tetap proporsional/tidak gepeng */
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Responsive untuk HP [cite: 257-262] */
+        @media (max-width: 600px) {
+            nav, article { width: 100%; height: auto; }
+            .gallery img { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Gambar Pemandangan</h1>
+        
+        <div class="gallery">
+            <img src="gambar1.jpg.jpg" alt="Pemandangan 1">
+            <img src="gambar2.jpg.jpg" alt="Pemandangan 2">
+            <img src="gambar3.jpg.jpg" alt="Pemandangan 3">
+            <img src="gambar4.jpg.jpg" alt="Pemandangan 4">
+            <img src="gambar5.jpg.jpg" alt="Pemandangan 5">
+            <img src="gambar6.jpg.jpg" alt="Pemandangan 6">
+        </div>
+
+    </article>
+</section>
+
+<footer>
+    <p>David Qhoiri satriyo Wibowo - 253307044</p>
+</footer>
+
+</body>
+</html>
