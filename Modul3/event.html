@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Event - Mouse Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        /* CSS Layouting Dasar sesuai Modul 3 */
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        
+        nav { 
+            float: left; 
+            width: 30%; 
+            min-height: 600px; 
+            background: #ccc; 
+            padding: 20px; 
+        }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        article { 
+            float: left; 
+            padding: 20px; 
+            width: 70%; 
+            background-color: #f1f1f1; 
+            min-height: 600px; 
+        }
+        
+        section::after { 
+            content: ""; 
+            display: table; 
+            clear: both; 
+        }
+        
+        footer { 
+            background-color: #777; 
+            padding: 10px; 
+            text-align: center; 
+            color: white; 
+        }
+
+        /* Styling Galeri */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .gallery img {
+            width: calc(33.33% - 7px); 
+            height: 180px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.4s ease; /* Membuat semua transisi gaya menjadi halus */
+        }
+
+        @media (max-width: 600px) {
+            nav, article { width: 100%; height: auto; }
+            .gallery img { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Ujicoba Mouse Event pada 6 Gambar</h1>
+        <p>Setiap gambar di bawah ini memiliki efek interaktif yang berbeda:</p>
+        
+        <div class="gallery">
+            <img src="gambar1.jpg.jpg" alt="Foto 1" 
+                 onmouseover="this.style.transform='scale(1.1)'" 
+                 onmouseout="this.style.transform='scale(1)'">
+
+            <img src="gambar2.jpg.jpg" alt="Foto 2" 
+                 onmouseover="this.style.opacity='0.4'" 
+                 onmouseout="this.style.opacity='1'">
+
+            <img src="gambar3.jpg.jpg" alt="Foto 3" 
+                 style="filter: grayscale(100%);"
+                 onmouseover="this.style.filter='grayscale(0%)'" 
+                 onmouseout="this.style.filter='grayscale(100%)'">
+
+            <img src="gambar4.jpg.jpg" alt="Foto 4" 
+                 onmouseover="this.style.transform='rotate(7deg)'" 
+                 onmouseout="this.style.transform='rotate(0deg)'">
+
+            <img src="gambar5.jpg.jpg" alt="Foto 5" 
+                 onmouseover="this.style.borderColor='#ff6347'; this.style.borderWidth='5px'" 
+                 onmouseout="this.style.borderColor='#ddd'; this.style.borderWidth='2px'">
+
+            <img src="gambar6.jpg.jpg" alt="Foto 6" 
+                 onmouseover="this.style.filter='blur(4px)'" 
+                 onmouseout="this.style.filter='blur(0px)'">
+        </div>
+
+        <p style="margin-top: 30px;">
+            <b>Kesimpulan Hasil Ujicoba:</b><br>
+            Saya telah berhasil memberikan efek pada 6 gambar menggunakan atribut <i>Mouse Event</i>. 
+            Gambar 1 menggunakan <b>scale</b> untuk zoom, Gambar 2 menggunakan <b>opacity</b>, 
+            Gambar 3 menggunakan filter <b>grayscale</b>, Gambar 4 menggunakan <b>rotate</b>, 
+            Gambar 5 mengubah warna <b>border</b>, dan Gambar 6 menggunakan filter <b>blur</b>. 
+            Hal ini membuktikan bahwa HTML5 dan CSS memungkinkan elemen gambar menjadi lebih dinamis 
+            dan responsif terhadap interaksi kursor pengguna.
+        </p>
+    </article>
+</section>
+
+<footer>
+    <p>David Qhoiri satriyo Wibowo - 253307044</p>
+</footer>
+
+</body>
+</html>
