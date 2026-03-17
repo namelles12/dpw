@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan 2.3 - Form Pendaftaran</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Header Halaman</h1>
+    </div>
+
+    <div id="main-container">
+        <div id="navigation">
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <fieldset>
+                <legend>Form Pendaftaran Mahasiswa Baru</legend>
+                <form action="proses.php" method="POST">
+                    <table cellpadding="5">
+                        <tr>
+                            <td>Nama Lengkap</td>
+                            <td>: <input type="text" name="nama_lengkap" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td>Tempat/Tanggal Lahir</td>
+                            <td>: 
+                                <input type="text" name="tempat_lahir" size="15"> /
+                                <select name="tgl">
+                                    <script>for(let i=1; i<=31; i++) document.write(`<option value="${i}">${i}</option>`);</script>
+                                </select> -
+                                <select name="bln">
+                                    <script>for(let i=1; i<=12; i++) document.write(`<option value="${i}">${i}</option>`);</script>
+                                </select> -
+                                <select name="thn">
+                                    <option value="1989">1989</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1994">1994</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Agama</td>
+                            <td>: 
+                                <select name="agama">
+                                    <option value="">-PILIH-</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>: 
+                                <input type="radio" name="jk" value="L" id="l"><label for="l"> Laki-laki</label>
+                                <input type="radio" name="jk" value="P" id="p"><label for="p"> Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>No. Ijazah SMA/MA</td>
+                            <td>: <input type="text" name="no_ijazah" size="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Foto (Ukuran Maks 20 KB)</td>
+                            <td>: <input type="file" name="foto"></td>
+                        </tr>
+                        <tr>
+                            <td>Nama Ayah</td>
+                            <td>: <input type="text" name="ayah" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td>Nama Ibu</td>
+                            <td>: <input type="text" name="ibu" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">Alamat Rumah</td>
+                            <td>: <textarea name="alamat_rumah" cols="30" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>No. Telp</td>
+                            <td>: <input type="tel" name="telp" size="20"></td>
+                        </tr>
+                        <tr>
+                            <td>Nama Sekolah Asal</td>
+                            <td>: <input type="text" name="sekolah_asal" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">Alamat Sekolah Asal</td>
+                            <td>: <textarea name="alamat_sekolah" cols="30" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Jurusan Dipilih</td>
+                            <td>: 
+                                <select name="jurusan">
+                                    <option value="">-PILIH-</option>
+                                    <option value="KA">Komputerisasi Akuntansi</option>
+                                    <option value="AB">Administrasi Bisnis</option>
+                                    <option value="TKK">Teknik Komputer Kontrol</option>
+                                    <option value="TL">Teknik Listrik</option>
+                                    <option value="MO">Mesin Otomotif</option>
+                                    <option value="KA">Perkeretaapian</option>
+                                    <option value="TI">Teknologi Informasi</option>
+                                    <option value="AKT">Akuntansi</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tahu informasi ini dari</td>
+                            <td>: 
+                                <input type="checkbox" name="info[]" value="Koran"> Koran
+                                <input type="checkbox" name="info[]" value="Website"> Website
+                                <input type="checkbox" name="info[]" value="TV"> Televisi
+                                <input type="checkbox" name="info[]" value="Radio"> Radio
+                                <input type="checkbox" name="info[]" value="Teman"> Teman
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="DAFTAR">
+                                <input type="reset" value="BATAL">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+
+            <p>
+                <b>Nama: David Qhoiri satriyo Wibowo</b><br>
+                <b>NIM: 253307044</b>
+            </p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p><i>copyright@David Qhoiri satriyo Wibowo_253307044 2023</i></p>
+    </div>
+
+</body>
+</html>
