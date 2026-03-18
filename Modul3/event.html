@@ -8,7 +8,6 @@
     <meta name="nim" content="253307044">
 
     <style>
-        /* CSS Layouting Dasar sesuai Modul 3 */
         * { box-sizing: border-box; }
         body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
         header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
@@ -45,7 +44,6 @@
             color: white; 
         }
 
-        /* Styling Galeri */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -60,7 +58,7 @@
             border: 2px solid #ddd;
             border-radius: 4px;
             cursor: pointer;
-            transition: all 0.4s ease; /* Membuat semua transisi gaya menjadi halus */
+            transition: all 0.4s ease; 
         }
 
         @media (max-width: 600px) {
@@ -118,22 +116,8 @@
                  onmouseover="this.style.filter='blur(4px)'" 
                  onmouseout="this.style.filter='blur(0px)'">
         </div>
-
-        <p style="margin-top: 30px;">
-            <b>Kesimpulan Hasil Ujicoba:</b><br>
-            Saya telah berhasil memberikan efek pada 6 gambar menggunakan atribut <i>Mouse Event</i>. 
-            Gambar 1 menggunakan <b>scale</b> untuk zoom, Gambar 2 menggunakan <b>opacity</b>, 
-            Gambar 3 menggunakan filter <b>grayscale</b>, Gambar 4 menggunakan <b>rotate</b>, 
-            Gambar 5 mengubah warna <b>border</b>, dan Gambar 6 menggunakan filter <b>blur</b>. 
-            Hal ini membuktikan bahwa HTML5 dan CSS memungkinkan elemen gambar menjadi lebih dinamis 
-            dan responsif terhadap interaksi kursor pengguna.
-        </p>
     </article>
 </section>
-
-<footer>
-    <p>David Qhoiri satriyo Wibowo - 253307044</p>
-</footer>
 
 </body>
 </html>
