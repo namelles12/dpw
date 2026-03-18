@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Audio - Pemutar Musik</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        
+        nav { 
+            float: left; 
+            width: 30%; 
+            min-height: 500px; 
+            background: #ccc; 
+            padding: 20px; 
+        }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        article { 
+            float: left; 
+            padding: 20px; 
+            width: 70%; 
+            background-color: #f1f1f1; 
+            min-height: 500px; 
+        }
+        
+        section::after { 
+            content: ""; 
+            display: table; 
+            clear: both; 
+        }
+        
+        footer { 
+            background-color: #777; 
+            padding: 10px; 
+            text-align: center; 
+            color: white; 
+        }
+
+        .audio-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        
+        audio {
+            width: 100%; 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Ujicoba Audio HTML5</h1>
+        <p>Halaman ini mendemonstrasikan pemutar audio menggunakan elemen &lt;audio&gt;.</p>
+        
+        <div class="audio-container">
+            <h3>Audio 1</h3>
+            <audio controls>
+                <source src="Audio1.mp3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="audio-container">
+            <h3>Audio 2</h3>
+            <audio controls>
+                <source src="Audio2.mp3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <p style="margin-top: 40px;">
+            <b>Kesimpulan Hasil Ujicoba:</b><br>
+            Melalui latihan ini, saya memahami bahwa tag &lt;audio&gt; memungkinkan integrasi media suara secara langsung di web. Penggunaan atribut <b>controls</b> memberikan kendali penuh kepada pengguna untuk memutar, menghentikan, dan mengatur volume. Pastikan penulisan nama file pada <i>src</i> sesuai dengan file asli di folder agar audio dapat dimuat dengan sukses.
+        </p>
+    </article>
+</section>
+
+
+</body>
+</html>
