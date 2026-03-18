@@ -8,7 +8,6 @@
     <meta name="nim" content="253307044">
 
     <style>
-        /* Layouting Dasar sesuai Modul 3 [cite: 213-263] */
         * { box-sizing: border-box; }
         body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
         header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
@@ -45,24 +44,21 @@
             color: white; 
         }
 
-        /* PERBAIKAN: Galeri agar pas 3 gambar per baris sesuai screenshot */
         .gallery {
             display: flex;
-            flex-wrap: wrap; /* Supaya gambar ke-4 otomatis turun ke bawah */
-            gap: 10px;       /* Jarak antar gambar */
+            flex-wrap: wrap; 
+            gap: 10px;      
             margin-top: 20px;
         }
         
         .gallery img {
-            /* Menghitung lebar: (100% / 3 gambar) dikurangi jarak gap */
             width: calc(33.33% - 7px); 
-            height: 180px;   /* Tinggi seragam agar rapi seperti di gambar */
-            object-fit: cover; /* Gambar tetap proporsional/tidak gepeng */
+            height: 180px;   
+            object-fit: cover; 
             border: 2px solid #ddd;
             border-radius: 4px;
         }
 
-        /* Responsive untuk HP [cite: 257-262] */
         @media (max-width: 600px) {
             nav, article { width: 100%; height: auto; }
             .gallery img { width: 100%; height: auto; }
