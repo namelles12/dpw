@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Pendaftaran</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        
+        nav { 
+            float: left; 
+            width: 30%; 
+            min-height: 800px; 
+            background: #ccc; 
+            padding: 20px; 
+        }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        article { 
+            float: left; 
+            padding: 20px; 
+            width: 70%; 
+            background-color: #f1f1f1; 
+            min-height: 800px; 
+        }
+        
+        section::after { 
+            content: ""; 
+            display: table; 
+            clear: both; 
+        }
+        
+        footer { 
+            background-color: #777; 
+            padding: 10px; 
+            text-align: center; 
+            color: white; 
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="date"], 
+        input[type="time"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #8b928b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Form Penjadwal Pertemuan</h1>
+        
+        <form action="#">
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+                
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="telp">No. Telepon (Format: XXXX-XXXXXX)</label>
+                <input type="text" id="telp" name="telp" pattern="[0-9]{4}-[0-9]{6,}" placeholder="Contoh: 0812-345678" required>
+
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" placeholder="nama@domain.com" required>
+
+                <label for="tgl_lahir">Tanggal Lahir (1987 - 1993)</label>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" min="1987-01-01" max="1993-01-01" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Permintaan Pertemuan</legend>
+
+                <label for="tujuan">Tujuan Pertemuan</label>
+                <input type="text" id="tujuan" name="tujuan">
+
+                <label for="kepentingan">Tingkat Kepentingan Pertemuan (0 - 10)</label>
+                <input type="range" id="kepentingan" name="kepentingan" min="0" max="10" step="1" value="5">
+
+                <label for="tgl_temu">Tanggal (Harus di atas hari ini)</label>
+                <input type="date" id="tgl_temu" name="tgl_temu" min="2026-03-30" required>
+
+                <label for="waktu">Waktu (17.00 - 21.00 WIB)</label>
+                <input type="time" id="waktu" name="waktu" min="17:00" max="21:00" required>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div style="margin-top: 30px;">
+            <p>
+                <b>Kesimpulan Hasil Ujicoba:</b><br>
+                Pada praktikum ini, saya mempelajari penggunaan elemen form HTML5 yang lebih canggih. Penggunaan atribut <code>pattern</code> sangat efektif untuk validasi format khusus seperti nomor telepon, sementara atribut <code>min</code> dan <code>max</code> memberikan kontrol ketat pada input tanggal dan jam sesuai kebutuhan bisnis. Fitur ini memudahkan pengguna dan mengurangi kesalahan input data di sisi klien.
+            </p>
+        </div>
+    </article>
+</section>
+
+
+</body>
+</html>
