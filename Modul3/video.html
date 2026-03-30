@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Video - Pemutar Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        /* CSS Layouting Dasar sesuai Modul 3 [cite: 38-88] */
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; }
+        
+        nav { 
+            float: left; 
+            width: 30%; 
+            min-height: 600px; 
+            background: #ccc; 
+            padding: 20px; 
+        }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        article { 
+            float: left; 
+            padding: 20px; 
+            width: 70%; 
+            background-color: #f1f1f1; 
+            min-height: 600px; 
+        }
+        
+        section::after { 
+            content: ""; 
+            display: table; 
+            clear: both; 
+        }
+        
+        footer { 
+            background-color: #777; 
+            padding: 10px; 
+            text-align: center; 
+            color: white; 
+        }
+
+        /* Styling khusus Video */
+        .video-wrapper {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        video, iframe {
+            max-width: 100%;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Ujicoba Video HTML5</h1>
+        
+        <div class="video-wrapper">
+            <h3>Video Lokal</h3>
+            <video width="420" height="315" controls muted autoplay>
+                <source src="Video1.mp4.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-wrapper">
+            <h3>Video dari YouTube</h3>
+            <iframe width="420" height="315" 
+                    src="https://www.youtube.com/embed/fn3KWM1kuAw" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <p style="margin-top: 40px;">
+            <b>Kesimpulan Hasil Ujicoba:</b><br>
+            Melalui praktikum ini, saya mempelajari penggunaan tag <code>&lt;video&gt;</code> untuk memutar file lokal seperti <i>Skateboard.mp4</i>. Penggunaan atribut <b>autoplay</b> dan <b>muted</b> memungkinkan video berjalan otomatis saat halaman dimuat. Selain itu, saya juga mempraktikkan cara menyematkan video eksternal menggunakan <code>&lt;iframe&gt;</code>, yang sangat efisien untuk menampilkan konten dari platform seperti YouTube tanpa membebani penyimpanan server lokal[cite: 137].
+        </p>
+    </article>
+</section>
+
+</body>
+</html>
