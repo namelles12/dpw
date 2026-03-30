@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Qhoiri satriyo Wibowo">
+    <meta name="nim" content="253307044">
+
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
+        header { background-color: #666; padding: 30px; text-align: center; color: white; }
+        nav { float: left; width: 30%; min-height: 500px; background: #ccc; padding: 20px; }
+        article { float: left; padding: 20px; width: 70%; background-color: #f1f1f1; min-height: 500px; }
+        section::after { content: ""; display: table; clear: both; }
+        footer { background-color: #777; padding: 10px; text-align: center; color: white; }
+        
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Ujicoba Canvas HTML5</h1>
+        <canvas id="canvas" width="400" height="400" style="background-color:#333">
+            Browser Anda tidak mendukung elemen canvas.
+        </canvas>
+
+        <p style="margin-top: 20px;">
+            <b>Kesimpulan Hasil Ujicoba:</b><br>
+            Elemen <code>&lt;canvas&gt;</code> berfungsi sebagai kontainer grafis yang sangat fleksibel karena kontennya digambar menggunakan skrip JavaScript. Berbeda dengan SVG yang berbasis vektor XML, Canvas lebih cocok untuk grafis yang memerlukan perenderan dinamis atau game sederhana [cite: 327-331].
+        </p>
+    </article>
+</section>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
