@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-class Selector</title>
+    <style>
+        p {
+            display: none;
+            background-color: darkgray;
+            padding: 20px;
+        }
+
+        div:hover p {
+            display: block;
+        }
+
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="border: 1px solid black; padding: 10px; width: 350px; background-color: #f9f9f9; cursor: pointer;">
+        Letakkan kursor disini untuk melihat div element
+        <p>Saya adalah element "p"</p>
+    </div>
+
+    <br><br>
+
+    <a href="#">Coba dekatkan mouse ke link ini!</a>
+
+</body>
+</html>
