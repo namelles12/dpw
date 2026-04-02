@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah_flex {
+            display: flex; 
+            background-color: #f0f0f0; 
+            padding: 10px; 
+        }
+
+        .wadah_flex > div {
+            background-color: #2196F3; 
+            margin: 10px; 
+            padding: 20px; 
+            font-size: 30px; 
+            color: white;
+            text-align: center;
+        }
+        
+        .wadah_flex {
+            flex-direction: row; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wadah_flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <hr>
+
+    <p><strong>Kesimpulan Skenario 1 & 2:</strong> Elemen div yang tadinya bertumpuk ke bawah (block) menjadi berjejer ke samping karena properti display: flex. [cite: 61]</p>
+    
+    <p><strong>Kesimpulan Skenario 3:</strong> Properti flex-direction menentukan arah item, jika set ke column maka item akan kembali bertumpuk vertikal. [cite: 88]</p>
+    
+    <p><strong>Kesimpulan Skenario 4:</strong> flex-wrap memungkinkan item pindah ke baris baru jika lebar layar tidak mencukupi, mencegah overflow horizontal. [cite: 95]</p>
+    
+    <p><strong>Kesimpulan Skenario 5:</strong> flex-flow adalah shorthand (cara cepat) untuk menuliskan flex-direction dan flex-wrap sekaligus. [cite: 104]</p>
+    
+    <p><strong>Kesimpulan Skenario 6:</strong> justify-content mengatur distribusi ruang kosong antar item secara horizontal (main axis). [cite: 114]</p>
+
+</body>
+</html>
