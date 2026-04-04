@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery Foto Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 15px; 
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Item foto */
+        .gallery-item {
+            width: 150px; 
+            height: 150px;
+            object-fit: cover; /
+            border: 3px solid #2196F3;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1); 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kumpulan Foto</h2>
+
+    <div class="gallery-container">
+        <img src="image/foto1.jpg" class="gallery-item" alt="Foto 1">
+        <img src="image/foto2.jpg" class="gallery-item" alt="Foto 2">
+        <img src="image/foto3.jpg" class="gallery-item" alt="Foto 3">
+        <img src="image/foto4.jpg" class="gallery-item" alt="Foto 4">
+        <img src="image/foto5.jpg" class="gallery-item" alt="Foto 5">
+        <img src="image/foto6.jpg" class="gallery-item" alt="Foto 6">
+        <img src="image/foto7.jpg" class="gallery-item" alt="Foto 7">
+        <img src="image/foto8.jpg" class="gallery-item" alt="Foto 8">
+        <img src="image/foto9.jpg" class="gallery-item" alt="Foto 9">
+        <img src="image/foto10.jpg" class="gallery-item" alt="Foto 10">
+        <img src="image/foto11.jpg" class="gallery-item" alt="Foto 11">
+        <img src="image/foto12.jpg" class="gallery-item" alt="Foto 12">
+        <img src="image/foto13.jpg" class="gallery-item" alt="Foto 13">
+        <img src="image/foto14.jpg" class="gallery-item" alt="Foto 14">
+        <img src="image/foto15.jpg" class="gallery-item" alt="Foto 15">
+        <img src="image/foto16.jpg" class="gallery-item" alt="Foto 16">
+        <img src="image/foto17.jpg" class="gallery-item" alt="Foto 17">
+        <img src="image/foto18.jpg" class="gallery-item" alt="Foto 18">
+    </div>
+
+</body>
+</html>
