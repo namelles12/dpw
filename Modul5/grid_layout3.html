@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid - Skenario 1 & 2</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-columns: 70px 300px auto 40px; 
+        }
+
+        .item1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .kesimpulan-box {
+            grid-column: 1 / span 4; 
+            background-color: white;
+            padding: 20px;
+            margin-top: 10px;
+            border: 2px solid #333;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+
+        <div class="kesimpulan-box">
+            <strong>Kesimpulan Skenario 1:</strong><br>
+            Dengan menggunakan properti <code>grid-column-start: 1</code> dan <code>grid-column-end: 3</code> pada <code>.item1</code>, kotak nomor 1 tidak lagi hanya menempati satu sel, melainkan melebar hingga kolom kedua. Ini menunjukkan cara kerja <em>column spanning</em> pada CSS Grid.
+            <br><br>
+            <strong>Kesimpulan Skenario 2:</strong><br>
+            Ketika nilai <code>grid-template-columns</code> diubah menjadi nilai spesifik seperti <code>70px 300px auto 40px</code>, layout menjadi lebih kaku namun presisi. Kolom pertama, kedua, dan keempat akan memiliki lebar tetap dalam pixel, sementara kolom ketiga (auto) akan mengambil sisa ruang yang tersedia.
+        </div>
+    </div>
+
+</body>
+</html>
