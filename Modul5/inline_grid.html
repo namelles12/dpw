@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar CSS Grid box - Inline</title>
+    <style>
+        .tempat_grid {
+            display: inline-grid; 
+            grid-template-columns: auto auto auto; 
+            background-color: #2196F3; 
+            padding: 10px; 
+        }
+
+        .item_grid {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border: 1px solid rgba(0, 0, 0, 0.8); 
+            padding: 20px; 
+            font-size: 30px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tampilan Inline Grid:</h1>
+
+    <div class="tempat_grid">
+        <div class="item_grid">1</div> 
+        <div class="item_grid">2</div> 
+        <div class="item_grid">3</div> 
+        <div class="item_grid">4</div> 
+        <div class="item_grid">5</div> 
+        <div class="item_grid">6</div> 
+        <div class="item_grid">7</div> 
+        <div class="item_grid">8</div> 
+        <div class="item_grid">9</div> 
+        
+        <div style="grid-column: span 3; background: white; padding: 10px; margin-top: 5px;">
+            <strong>Kesimpulan Skenario 2:</strong> 
+            <br>
+            Perbedaan antara <code>grid</code> dan <code>inline-grid</code> terletak pada sifat pembungkusnya (container). 
+            Jika pada skenario 1 (grid) container memenuhi seluruh lebar halaman (block-level), pada skenario 2 (inline-grid) container hanya akan selebar konten yang ada di dalamnya dan dapat berdampingan dengan elemen inline lainnya.
+        </div>
+    </div>
+
+</body>
+</html>
