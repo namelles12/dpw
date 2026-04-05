@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Grid - Layout 2</title>
+    <style>
+        .grid-container {
+            display: grid; 
+            grid-gap: 50px; 
+            background-color: #2196F3; 
+            padding: 10px; 
+            grid-template-columns: auto auto auto auto; 
+        }
+
+        .item1 {
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px; 
+            font-size: 30px; 
+            text-align: center; 
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border: 1px solid rgba(0, 0, 0, 0.8); 
+            padding: 20px; 
+            font-size: 30px; 
+            text-align: center; 
+        }
+
+        .box-kesimpulan {
+            grid-column: 1 / -1; 
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 10px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+
+        <div class="box-kesimpulan">
+            <strong>Kesimpulan Skenario 1:</strong>
+            <br>
+            Dengan menggunakan properti <code>grid-column-start: 1</code> dan <code>grid-column-end: 3</code>, Item 1 berhasil menggabungkan dua kolom menjadi satu (span), sehingga ukurannya lebih lebar dibanding item lainnya .
+            <br><br>
+            <strong>Kesimpulan Skenario 2:</strong>
+            <br>
+            Penggunaan <code>grid-template-columns</code> dengan nilai <code>auto auto auto auto</code> menciptakan 4 kolom dalam satu baris[cite: 244]. Jika nilai diubah menjadi <code>70px 300px auto 40px</code>, maka lebar setiap kolom akan menjadi statis sesuai nilai pixel yang ditentukan, kecuali kolom ketiga yang tetap fleksibel (auto).
+        </div>
+    </div>
+
+</body>
+</html>
