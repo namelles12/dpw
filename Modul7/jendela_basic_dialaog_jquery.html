@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Basic Dialog jQuery UI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <div id="dialog-saya" title="Informasi Penting">
+        <p>Ini adalah contoh Basic Dialog yang dibuat menggunakan jQuery UI. Anda bisa menutup jendela ini dengan menekan tombol X di pojok kanan atas.</p>
+    </div>
+
+    <button id="buka-dialog">Buka Dialog</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#dialog-saya").dialog({
+                autoOpen: false,
+                modal: true, 
+                buttons: {
+                    "Tutup": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            $("#buka-dialog").click(function() {
+                $("#dialog-saya").dialog("open");
+            });
+        });
+    </script>
+
+</body>
+</html>
