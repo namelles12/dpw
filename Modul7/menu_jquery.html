@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Menu Navigasi jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .menu-container { background: #333; width: 200px; color: white; }
+        .menu-item { padding: 10px; cursor: pointer; border-bottom: 1px solid #444; }
+        .submenu { background: #444; display: none; }
+        .submenu div { padding: 8px 20px; font-size: 14px; border-bottom: 1px solid #555; }
+        .submenu div:hover { background: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <div class="menu-item" id="btn-materi">Materi JavaScript</div>
+        <div class="submenu" id="list-materi">
+            <div>Program Alert</div>
+            <div>Input Data</div>
+            <div>Confirm Box</div>
+        </div>
+        
+        <div class="menu-item" id="btn-tugas">Tugas Mandiri</div>
+        <div class="submenu" id="list-tugas">
+            <div>Waktu Real-time</div>
+            <div>AJAX & jQuery</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".menu-item").click(function(){
+                $(this).next(".submenu").slideToggle(300);
+            });
+        });
+    </script>
+
+</body>
+</html>
