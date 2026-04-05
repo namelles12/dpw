@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Download Dialog dengan Progressbar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    
+    <style>
+        #progressbar { margin-top: 20px; }
+        .progress-label {
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dialog-download" title="File Download">
+        <div class="progress-label">Menyiapkan download...</div>
+        <div id="progressbar"></div>
+    </div>
+
+    <button id="mulai-download">Unduh File Sekarang</button>
+
+    <script>
+        $(document).ready(function() {
+            var progressTimer,
+                progressbar = $("#progressbar"),
+                progressLabel = $(".progress-label"),
+                dialog = $("#dialog-download");
+
+            dialog.dialog({
+                autoOpen: false,
+                closeOnEscape: false,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Batal": function() {
+                        $(this).dialog("close");
+                    }
+                },
+                close: function() {
+                    clearInterval(progressTimer);
+                }
+            });
+
+            progressbar.progressbar({
+                value: false,
+                change: function() {
+                    progressLabel.text("Proses: " + progressbar.progressbar("value") + "%");
+                },
+                complete: function() {
+                    progressLabel.text("Download Selesai!");
+                    dialog.dialog("option", "buttons", [{
+                        text: "Tutup",
+                        click: function() { $(this).dialog("close"); }
+                    }]);
+                }
+            });
+
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+                progressbar.progressbar("value", val + Math.floor(Math.random() * 10));
+                
+                if (val < 99) {
+                    progressTimer = setTimeout(progress, 500);
+                }
+            }
+
+            $("#mulai-download").on("click", function() {
+                dialog.dialog("open");
+                progressbar.progressbar("value", 0);
+                progressLabel.text("Sedang mengunduh...");
+                progress();
+            });
+        });
+    </script>
+
+</body>
+</html>
