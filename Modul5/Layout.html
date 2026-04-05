@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout CSS Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-template-rows: 100px 200px 100px;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #e3f2fd;
+            border: 2px solid #2196F3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header {
+            grid-column: 1 / span 3;
+        }
+
+        .menu {
+            grid-row: 2 / span 2;
+        }
+
+        .main {
+            grid-column: 2 / span 1;
+        }
+
+        .right {
+            grid-column: 3 / span 1;
+        }
+
+        .footer {
+            grid-column: 2 / span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item menu">Menu</div>
+        <div class="grid-item main">Main</div>
+        <div class="grid-item right">Right</div>
+        <div class="grid-item footer">Footer</div>
+    </div>
+
+</body>
+</html>
