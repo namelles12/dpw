@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Contoh jQuery Sederhana</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2 id="teks">Halo! Saya sedang belajar jQuery.</h2>
+    
+    <button id="tombolSembunyi">Sembunyikan Teks</button>
+    <button id="tombolTampil">Tampilkan Teks</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#tombolSembunyi").click(function(){
+                $("#teks").hide(500); 
+            });
+
+            $("#tombolTampil").click(function(){
+                $("#teks").show(500);
+            });
+        });
+    </script>
+
+</body>
+</html>
