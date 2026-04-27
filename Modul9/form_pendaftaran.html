@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran</title>
+</head>
+<body>
+    <h2>Form Pendaftaran Mahasiswa</h2>
+    <form action="proses_pendaftaran.php" method="POST">
+        <table>
+            <tr>
+                <td>NIM:</td>
+                <td><input type="text" name="nim" required></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir:</td>
+                <td><input type="text" name="tempat_tgl_lahir" placeholder="Contoh: Madiun, 01-01-2000" required></td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><textarea name="alamat" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Laki-Laki" id="l"> <label for="l">Laki-Laki</label>
+                    <input type="radio" name="gender" value="Perempuan" id="p"> <label for="p">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Daftar Sekarang</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <h3>
+        Kesimpulannya adalah metode POST mengirim data di balik layar/HTTP body
+    </h3>
+</body>
+</html>
